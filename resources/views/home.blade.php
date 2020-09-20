@@ -20,6 +20,7 @@
                         <tr>
                             <th>Id</th>
                             <th>Type</th>
+                            <th>Model no.</th>
                             <th>Size</th>
                             <th>MRP</th>
                             <th>Offer Price</th>
@@ -33,6 +34,7 @@
                                 <tr>
                                     <td>{{$product->id}}</td>
                                     <td>{{$product->type}}</td>
+                                    <td>{{$product->model_no}}</td>
                                     <td>{{$product->size}}</td>
                                     <td>{{$product->MRP}}</td>
                                     <td>{{$product->offer_price}}</td>

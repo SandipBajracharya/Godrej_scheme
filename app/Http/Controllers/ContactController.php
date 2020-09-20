@@ -30,8 +30,8 @@ class ContactController extends Controller
             'category' => $request->input('category')
         );  
 
-        // Mail::to('sndp07.sb@gmail.com')->send(new SendMail($data));
-        Mail::to('testacc14556@gmail.com')->send(new SendMail($data));  //pw for testacc:- testgmail123
+        Mail::to('kushal.gautam@chaudharygroup.com')->send(new SendMail($data));
+        Mail::to('cgdigital.leads@chaudharygroup.com')->send(new SendMail($data));  //pw for testacc:- testgmail123
 
         $contact = new Contact;
         $contact->name = $request->input('name');

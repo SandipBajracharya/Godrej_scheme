@@ -40,7 +40,7 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             'type' => 'required | string | max:255',
-            'model' => 'required | string | unique:products | max:255',
+            'model' => 'required | string | max:255',
             'size' => 'required | string | max:255',
             'mrp' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'offer_price' => 'required|regex:/^\d+(\.\d{1,2})?$/',

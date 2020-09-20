@@ -105,9 +105,10 @@
 
                     <div class="col-md-6">
                         <select id="category" class="form-control @error('category') is-invalid @enderror" name="category" value="" required autocomplete="category" autofocus>
-                            <option value="television">Television</option>
+                            <option value="refrigerator">Refrigerator</option>
                             <option value="washing machine">Washine Machine</option>
-                            <option value="air conditioner">Air Conditioner</option>
+                            <option value="chest freezer">Chest Freezer</option>
+                            <option value="microwave oven">Microwave Oven</option>
                         </select>
                     </div>
                 </div>
@@ -127,7 +128,7 @@
                 </div>
 
                 <div class="text-center">
-                    <input type="submit" class="btn btn-danger" value="Submit"/>
+                    <input type="submit" class="btn btn-success" value="Submit"/>
                 </div>
 
             </form>

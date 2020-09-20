@@ -7,7 +7,7 @@
         <div class="px-2">
         <div class="row">
             <div class="col-lg-10">
-                <div class="tcl-landing-footer">
+                <div class="godrej-landing-footer">
                     <div class="row pl-3">
                         <img src=" {{ asset('/Theme/img/ChaudharyGroup.png')}} " alt="" style="max-height: 25px;">
                         <div class="footer-element ml-2">

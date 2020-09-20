@@ -2,16 +2,33 @@
 
 @section('content')
 
-    <section class="hero-section">
+    <section class="hero-section pt-5">
         <div class="hero-items owl-carousel">
-            <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej-1.jpg')}}">
+            <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej.png')}}">
             </div>
-            <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej--2.jpg')}}">
+            {{-- <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej--2.jpg')}}">
             </div>
-            <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej--3.jpg')}}"></div>
+            <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej--3.jpg')}}"></div> --}}
             {{-- <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/4.jpg')}}"></div> --}}
         </div>
     </section>
+
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <img src=" {{asset('Theme/img/top-slider/airConditioner.png')}} " alt="">
+            </div>
+            <div class="col-md-3">
+                <img src=" {{asset('Theme/img/top-slider/airCooler.png')}} " alt="">
+            </div>
+            <div class="col-md-3">
+                <img src=" {{asset('Theme/img/top-slider/microwave.png')}} " alt="">
+            </div>
+            <div class="col-md-3">
+                <img src=" {{asset('Theme/img/top-slider/hygiene.png')}} " alt="">
+            </div>
+        </div>
+    </div>
 
     <div id="popup-container-img">
         <div id="popup-img">
@@ -201,13 +218,13 @@
         <div class="card-body">
             <div class="owl-slider">
                 <div class="pl-2">
-                    <strong>Categories/ Television</strong>
+                    <strong>Categories/ Refrigerator</strong>
                 </div>
     
                 <div id="carousel" class="product-slider owl-carousel">
                     @if(count($posts)>0)
                         @foreach($posts as $product)
-                            @if($product->category == "television")
+                            @if($product->category == "refrigerator")
                             <div class="item">
                                 <div class="product-item">
                                     <div class="pi-pic">
@@ -249,13 +266,13 @@
             <div class="card-body">
                 <div class="owl-slider">
                     <div class="pl-2">
-                        <strong>Categories/ Air Conditioner</strong>
+                        <strong>Categories/ Chest Freezer</strong>
                     </div>
         
                     <div id="carousel" class="product-slider owl-carousel">
                         @if(count($posts)>0)
                             @foreach($posts as $product)
-                                @if($product->category == "air conditioner")
+                                @if($product->category == "chest freezer")
                                 <div class="item">
                                     <div class="product-item">
                                         <div class="pi-pic">
@@ -339,6 +356,54 @@
         </div>
     </div>
     {{-- end --}}
+
+{{-- Washing machine --}}
+<div class="container">
+    <div class="card-body">
+        <div class="owl-slider">
+            <div class="pl-2">
+                <strong>Categories/ Microwave Oven</strong>
+            </div>
+
+            <div id="carousel" class="product-slider owl-carousel">
+                @if(count($posts)>0)
+                    @foreach($posts as $product)
+                        @if($product->category == "microwave oven")
+                            <div class="item">
+                                <div class="product-item">
+                                    <div class="pi-pic">
+                                        <div class="card-body bg-blue-light">
+                                            <a onclick="showForm()"><img src="{{ asset('storage/images/'.$product->image)}}" alt=""></a>
+                                        </div>
+            
+                                        <div class="sale">Save Rs. {{$product->saved_customer}}</div>
+                                        
+                                        <ul>
+                                            <li class="w-icon active"><a onclick="showForm()">Buy now</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="pi-text">
+                                        <div class="catagory-name">{{$product->model_no}}</div>
+                                        <a href="">
+                                            <h5>{{$product->type}}</h5>
+                                        </a>
+                                        <div class="product-price">
+                                            Rs. {{$product->offer_price}}
+                                            <span>Rs. {{$product->MRP}}</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        @endif
+                    @endforeach
+                @endif
+
+            </div>
+        </div>
+    </div>
+</div>
+{{-- end --}}
 
     {{-- @include('inc.airConditionerProducts') --}}
     {{-- @include('inc.washingMachines') --}}
