@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded nav-small">
-    <a href="/godrej" class="godrej-landing-logo-sm">
+    <a href="/" class="godrej-landing-logo-sm">
         <img src="/Theme/img/brands/Godrej-Logo.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,10 +10,10 @@
       <ul class="navbar-nav mr-auto">
 
           <li class="nav-item">
-            <a class="nav-link" href="/godrej">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/godrej/about-godrej">About Godrej</a>
+            <a class="nav-link" href="#">About Godrej</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact"> Contact Us </a>

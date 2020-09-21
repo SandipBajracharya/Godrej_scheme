@@ -218,13 +218,13 @@
         <div class="card-body">
             <div class="owl-slider">
                 <div class="pl-2">
-                    <strong>Categories/ Refrigerator</strong>
+                    <strong>Categories/ Single Door Refrigerator</strong>
                 </div>
     
                 <div id="carousel" class="product-slider owl-carousel">
                     @if(count($posts)>0)
                         @foreach($posts as $product)
-                            @if($product->category == "refrigerator")
+                            @if($product->category == "single door refrigerator")
                             <div class="item">
                                 <div class="product-item">
                                     <div class="pi-pic">
@@ -260,6 +260,55 @@
         </div>
     </div>
     {{-- end --}}
+
+        {{--Double Door Refrigerator --}}
+
+        <div class="container">
+            <div class="card-body">
+                <div class="owl-slider">
+                    <div class="pl-2">
+                        <strong>Categories/ Double Door Refrigerator</strong>
+                    </div>
+        
+                    <div id="carousel" class="product-slider owl-carousel">
+                        @if(count($posts)>0)
+                            @foreach($posts as $product)
+                                @if($product->category == "double door refrigerator")
+                                <div class="item">
+                                    <div class="product-item">
+                                        <div class="pi-pic">
+                                            <div class="card-body bg-blue-light">
+                                                <a onclick="showForm()"><img src="{{ asset('storage/images/'.$product->image)}}" alt=""></a>
+                                            </div>
+                
+                                            <div class="sale">Save Rs. {{$product->saved_customer}}</div>
+    
+                                            <ul>
+                                                <li class="w-icon active"><a onclick="showForm()">Buy now</a></li>
+                                                
+                                            </ul>
+                                        </div>
+                                        <div class="pi-text">
+                                            <div class="catagory-name">{{$product->model_no}}</div>
+                                            <a href="">
+                                                <h5>{{$product->type}}</h5>
+                                            </a>
+                                            <div class="product-price">
+                                                Rs. {{$product->offer_price}}
+                                                <span>Rs. {{$product->MRP}}</span>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                @endif
+                            @endforeach
+                        @endif
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- end --}}
 
     {{-- Air conditioner --}}
         <div class="container">

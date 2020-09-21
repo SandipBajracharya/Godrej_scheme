@@ -7,20 +7,16 @@ use App\Models\Products;
 
 class GodrejController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('prevent-back-history');
-    }
 
     public function index()
     {
         $posts = Products::all();
-        return view('Godrej.Godrej_landing')->with('posts', $posts);
+        return view('Godrej.godrej_landing')->with('posts', $posts);
     }
 
     public function aboutGodrej()
     {
-        return view('Godrej.Godrej_aboutus');
+        return view('Godrej.godrej_aboutus');
     }
 
     public function catalog_download()

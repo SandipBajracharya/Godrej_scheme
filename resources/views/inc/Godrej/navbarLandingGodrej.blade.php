@@ -14,14 +14,14 @@
           <ul class="px-5 navbar-nav w-100 d-flex justify-content-between align-items-center">
                 <div class="d-flex">
                     <li class="nav-item nav__item">
-                        <a class="nav-link" href="/godrej">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                       </li>
                       <li class="nav-item nav__item ml-5">
-                        <a class="nav-link" href="/godrej/about-godrej">About Godrej</a>
+                        <a class="nav-link" href="#">About Godrej</a>
                       </li>
                 </div>
               <li class="hide-img">
-                <a href="/godrej">
+                <a href="/">
                     <img class="godrej-landing-logo" src="/Theme/img/brands/Godrej-Logo.png">
                 </a>
               </li>

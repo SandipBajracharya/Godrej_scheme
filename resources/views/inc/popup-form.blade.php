@@ -12,7 +12,7 @@
             </span>
         @enderror
 
-        <input type="text" placeholder="Phone number *" name="phone" class="form-control @error('phone') is-invalid @enderror mb-2" required>
+        <input type="text" placeholder="Phone number *" name="phone" maxlength="10" class="form-control @error('phone') is-invalid @enderror mb-2" required>
         @error('phone')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -44,9 +44,11 @@
             <label for="" class="col-md-4 col-form-label pl-1">Select Category:</label>
             <div class="col-md-8 pr-0">
                 <select class="form-control mb-2" name="category">
-                    <option value="Television">Television</option>
+                    <option value="Single Door Refrigerator">Single Door Refrigerator</option>
+                    <option value="Double Door Refrigerator">Double Door Refrigerator</option>
                     <option value="Washing Machine">Washing Machine</option>
-                    <option value="Air Conditioner">Air Conditioner</option>
+                    <option value="Chest Freezer">Chest Freezer</option>
+                    <option value="Microwave Oven">Microwave Oven</option>
                 </select>
             </div>
         </div>

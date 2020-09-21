@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth','prevent-back-history']);
+        $this->middleware('auth');
     }
 
 
@@ -92,7 +92,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Products::where('id','=',$id)->first();
+        return view('admin.product_edit', ['product' => $product]);
     }
 
     /**
@@ -104,7 +105,40 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'type' => 'required | string | max:255',
+            'model' => 'required | string| max:255',
+            'size' => 'required | string | max:255',
+            'mrp' => 'required|regex:/^\d+(\.\d{1,2})?$/',
+            'offer_price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
+            'save_customer' => 'required|regex:/^\d+(\.\d{1,2})?$/',
+            'image' => 'image|max:1999|nullable',
+        ]);
+        
+        $product = Products::where('id','=',$id)->first();
+
+        if($request->hasFile('image')){
+            $FileNameWithExtension = $request->file('image')->getClientOriginalName();
+            $fileName = pathinfo($FileNameWithExtension, PATHINFO_FILENAME);
+            $extension = $request->file('image')->getClientOriginalExtension();
+            $FileToStore = $fileName.'_'.time().'.'.$extension;
+            $path = $request -> file('image') -> storeAs('public/images', $FileToStore);
+            Storage::delete('public/images/'.$product->image);
+        }
+
+        $product->type = $request->input('type');
+        $product->model_no = $request->input('model');
+        $product->size = $request->input('size');
+        $product->MRP = $request->input('mrp');
+        $product->offer_price = $request->input('offer_price');
+        $product->saved_customer = $request->input('save_customer');
+        $product->category = $request->input('category');
+        if($request->hasFile('image')){
+            $product->image = $FileToStore;
+        }
+        $product->save();
+
+        return redirect('/home')->with('success','Product edited');
     }
 
     /**

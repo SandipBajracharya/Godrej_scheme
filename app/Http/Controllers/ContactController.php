@@ -42,6 +42,6 @@ class ContactController extends Controller
         $contact->category = $request->input('category');
         $contact->save();
 
-        return redirect('/godrej/about-godrej')->with('success','Information stored. We will soon contact you. Thank you!');
+        return redirect('/about-godrej')->with('success','Information stored. We will soon contact you. Thank you!');
     }
 }

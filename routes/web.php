@@ -14,12 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\GodrejController;
-Route::get('/godrej', [GodrejController::class, 'index'])->name('godrej.index');
-Route::get('/godrej/about-godrej', [GodrejController::class, 'aboutgodrej'])->name('godrej.about');
-Route::get('/godrej/download', [GodrejController::class, 'catalog_download'])->name('godrej.catalog');
+Route::get('/', [GodrejController::class, 'index'])->name('godrej.index');
+Route::get('/about-godrej', [GodrejController::class, 'aboutgodrej'])->name('godrej.about');
+Route::get('/download', [GodrejController::class, 'catalog_download'])->name('godrej.catalog');
 
 use App\Http\Controllers\ContactController;
-Route::post('/godrej/contact-save', [ContactController::class, 'contact_save'])->name('contact.save');
+Route::post('/contact-save', [ContactController::class, 'contact_save'])->name('contact.save');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
