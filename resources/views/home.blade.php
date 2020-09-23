@@ -26,6 +26,7 @@
                             <th>Offer Price</th>
                             <th>Saved by Customer</th>
                             <th>Category</th>
+                            {{-- <th>Image</th> --}}
                             <th colspan=2>Actions</th>
                         </tr>
 
@@ -40,6 +41,7 @@
                                     <td>{{$product->offer_price}}</td>
                                     <td>{{$product->saved_customer}}</td>
                                     <td>{{$product->category}}</td>
+                                    {{-- <td> {{$product->image}} </td> --}}
                                     <td>
                                         <a href="/products/{{$product->id}}/edit" class="btn btn-info btn-sm">Edit</a>
                                     </td>

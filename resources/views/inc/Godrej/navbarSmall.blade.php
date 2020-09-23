@@ -13,7 +13,7 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About Godrej</a>
+            <a class="nav-link" href="/about-godrej">About Godrej</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact"> Contact Us </a>

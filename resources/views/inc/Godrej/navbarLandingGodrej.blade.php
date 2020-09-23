@@ -17,7 +17,7 @@
                         <a class="nav-link" href="/">Home</a>
                       </li>
                       <li class="nav-item nav__item ml-5">
-                        <a class="nav-link" href="#">About Godrej</a>
+                        <a class="nav-link" href="/about-godrej">About Godrej</a>
                       </li>
                 </div>
               <li class="hide-img">

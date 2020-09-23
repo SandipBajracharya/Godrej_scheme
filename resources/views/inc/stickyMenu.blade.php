@@ -11,8 +11,13 @@
             </a>
         </li>
         <li>
+            <a href="https://invite.viber.com/?g2=AQA7sYyUD9aHqUuahzeIpoHoSpz8gcL%2Bjhuoiw%2FJGoeuZmI8NLaBTONkrqUcy0kS" title="Viber" target="_blank">
+                <img src="{{ asset('Theme/img/icons/viber3.png')}}" alt="Viber">
+            </a>
+        </li>
+        <li>
             <a href="https://www.youtube.com/user/GodrejAppliances?fbclid=IwAR1Nd9NlUGaf7aVq6z9F0ggBTTb6-x_Hbos0LFOAZHNnFF-fUOkz2pqumvo" title="Youtube" target="_blank">
-                <img src="{{ asset('Theme/img/icons/Youtube.png')}}" alt="Youtube">
+                <img src="{{ asset('Theme/img/icons/youtube.png')}}" alt="Youtube">
             </a>
         </li>
         {{-- <li>

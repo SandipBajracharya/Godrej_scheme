@@ -21,11 +21,11 @@ class GodrejController extends Controller
 
     public function catalog_download()
     {
-        $file = public_path()."/storage/pdf/catalogue.pdf";
+        $file = public_path()."/storage/pdf/Godrej-catalogue.pdf";
         $header = [
             'Content-Type' => 'application/pdf',
         ];
-        return response()->download($file,'catalogue.pdf',$header);
+        return response()->download($file,'Godrej-catalogue.pdf',$header);
     }
 
 }

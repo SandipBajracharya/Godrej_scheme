@@ -149,7 +149,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $product = Products::find($id)->first();
+        $product = Products::find($id);
         if($product->image != "noimage.jpg"){
             Storage::delete('public/images/'.$product->image);
         }

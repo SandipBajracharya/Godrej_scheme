@@ -1,9 +1,10 @@
 /*----------------- Parallax effect ----------------------*/
 
-.parallax-container-about {
-    background-image: url('/Theme/img/news&media/News.jpg');
+.parallax-banner{
+    background-image: url('/Theme/img/top-slider/godrej.png');
     background-attachment: fixed;
     background-size: cover;
+    height: 100%;
 }
 
 .parallax-body {
@@ -336,10 +337,16 @@
         display: block;
     }
 
-    #popup-img {
-        width: 45.5rem !important;
-        height: 25rem !important;
-    }
+    /* #popup-img {
+        width: 25rem !important;
+        height: 20rem !important;
+    } */
+
+    /* .top-img-mobile {
+        background-image: url('/Theme/img/top-slider/godrej.png');
+        background-position: center;
+        background-size: cover;
+    } */
 }
 
 @media only screen and (min-device-width: 991px) {
@@ -352,6 +359,10 @@
         width: 50.5rem !important;
         height: 30rem !important;
     }
+
+    /* .top-img-mobile {
+        display: none;
+    } */
 }
 
 

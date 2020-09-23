@@ -179,7 +179,7 @@ ol {
 }
 
 .spad {
-	padding-top: 70px;
+	padding-top: 135px;
 	padding-bottom: 70px;
 }
 
@@ -1003,7 +1003,7 @@ ol {
 -----------------------*/
 
 .hero-items .single-hero-items {
-	height: 725px;
+	height: 760px;
 	padding-top: 210px;
 }
 
@@ -4164,6 +4164,11 @@ ol {
 	.related-products .product-item .pi-pic ul li a {
 		padding: 16px 12px 12px 11px;
 	}
+
+	.hero-items .single-hero-items {
+		height: auto;
+		padding: 270px 0px;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -4394,9 +4399,9 @@ ol {
 		font-size: 12px;
 	}
 	.hero-items .single-hero-items {
-		padding: 110px 25px 80px;
+		padding: 109px 0px;
 		height: auto;
-		background: left center;
+		/* background: left center; */
 	}
 	.hero-items .single-hero-items h1 {
 		font-size: 40px;
@@ -6169,7 +6174,7 @@ ol {
 		font-size: 13px;
 		border-left: 1px solid #333;
 		/* border-right: 1px solid #333; */
-		width: 320px;
+		/* width: auto; */
 		/* margin: 0px 7px; */
 	}
 

@@ -4,38 +4,55 @@
 
     <section class="hero-section pt-5">
         <div class="hero-items owl-carousel">
-            <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej.png')}}">
+            <div class="single-hero-items set-bg w-100" data-setbg="{{ asset('/Theme/img/top-slider/slider.png')}}" >
             </div>
-            {{-- <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej--2.jpg')}}">
-            </div>
-            <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/godrej--3.jpg')}}"></div> --}}
-            {{-- <div class="single-hero-items set-bg" data-setbg="{{ asset('/Theme/img/top-slider/4.jpg')}}"></div> --}}
         </div>
     </section>
+    {{-- <div class="spad parallax-banner pt-5">
+    </div> --}}
+
 
     <div class="container pt-4">
         <div class="row">
-            <div class="col-md-3">
+            {{-- <div class="col-md-2">
                 <img src=" {{asset('Theme/img/top-slider/airConditioner.png')}} " alt="">
-            </div>
-            <div class="col-md-3">
+            </div> --}}
+            <div class="col-md-2 offset-md-1">
                 <img src=" {{asset('Theme/img/top-slider/airCooler.png')}} " alt="">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <img src=" {{asset('Theme/img/top-slider/microwave.png')}} " alt="">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <img src=" {{asset('Theme/img/top-slider/hygiene.png')}} " alt="">
             </div>
+            <div class="col-md-2">
+                <img src=" {{asset('Theme/img/top-slider/washingMachine.png')}} " alt="">
+            </div>
+            <div class="col-md-2">
+                <img src=" {{asset('Theme/img/top-slider/chest_freezer_top.PNG')}} " alt="">
+            </div>
+            <div class="offset-md-1"></div>
         </div>
     </div>
 
-    <div id="popup-container-img">
-        <div id="popup-img">
-            {{-- <img src=" {{ asset('/Theme/img/preload.jpg')}} " alt=""> --}}
-            <button type="button" class="btn" onclick="closeImg()" id="close-img"><i class="fa fa-times" aria-hidden="true"></i></button>
+    {{-- <div class="container pt-4">
+        <div class="row">
+            <div class="col-md-3 offset-md-3">
+                <img src=" {{asset('Theme/img/top-slider/washingMachine.png')}} " alt="">
+            </div>
+            <div class="col-md-3">
+                <img src=" {{asset('Theme/img/top-slider/chest_freezer_top.PNG')}} " alt="">
+            </div>
         </div>
-    </div>
+    </div> --}}
+
+    {{-- <div id="popup-container-img">
+        <div id="popup-img"> --}}
+            {{-- <img src=" {{ asset('/Theme/img/preload.jpg')}} " alt=""> --}}
+            {{-- <button type="button" class="btn" onclick="closeImg()" id="close-img"><i class="fa fa-times" aria-hidden="true"></i></button>
+        </div>
+    </div> --}}
 
     {{-- <div style=" overflow: hidden;">
         <div class="py-4 px-2">
@@ -244,6 +261,7 @@
                                         <a href="">
                                             <h5>{{$product->type}}</h5>
                                         </a>
+                                        {{$product->size}}
                                         <div class="product-price">
                                             Rs. {{$product->offer_price}}
                                             <span>Rs. {{$product->MRP}}</span>
@@ -293,6 +311,7 @@
                                             <a href="">
                                                 <h5>{{$product->type}}</h5>
                                             </a>
+                                            {{$product->size}}
                                             <div class="product-price">
                                                 Rs. {{$product->offer_price}}
                                                 <span>Rs. {{$product->MRP}}</span>
@@ -341,6 +360,7 @@
                                             <a href="">
                                                 <h5>{{$product->type}}</h5>
                                             </a>
+                                            {{$product->size}}
                                             <div class="product-price">
                                                 Rs. {{$product->offer_price}}
                                                 <span>Rs. {{$product->MRP}}</span>
@@ -389,6 +409,7 @@
                                             <a href="">
                                                 <h5>{{$product->type}}</h5>
                                             </a>
+                                            {{$product->size}}
                                             <div class="product-price">
                                                 Rs. {{$product->offer_price}}
                                                 <span>Rs. {{$product->MRP}}</span>
@@ -437,6 +458,56 @@
                                         <a href="">
                                             <h5>{{$product->type}}</h5>
                                         </a>
+                                        {{$product->size}}
+                                        <div class="product-price">
+                                            Rs. {{$product->offer_price}}
+                                            <span>Rs. {{$product->MRP}}</span>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        @endif
+                    @endforeach
+                @endif
+
+            </div>
+        </div>
+    </div>
+</div>
+{{-- end --}}
+
+{{-- Viroshield --}}
+<div class="container">
+    <div class="card-body">
+        <div class="owl-slider">
+            <div class="pl-2">
+                <strong>Categories/ Viroshield</strong>
+            </div>
+
+            <div id="carousel" class="product-slider owl-carousel">
+                @if(count($posts)>0)
+                    @foreach($posts as $product)
+                        @if($product->category == "viroshidel")
+                            <div class="item">
+                                <div class="product-item">
+                                    <div class="pi-pic">
+                                        <div class="card-body bg-blue-light">
+                                            <a onclick="showForm()"><img src="{{ asset('storage/images/'.$product->image)}}" alt=""></a>
+                                        </div>
+            
+                                        <div class="sale">Save Rs. {{$product->saved_customer}}</div>
+                                        
+                                        <ul>
+                                            <li class="w-icon active"><a onclick="showForm()">Buy now</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="pi-text">
+                                        <div class="catagory-name">{{$product->model_no}}</div>
+                                        <a href="">
+                                            <h5>{{$product->type}}</h5>
+                                        </a>
+                                        {{$product->size}}
                                         <div class="product-price">
                                             Rs. {{$product->offer_price}}
                                             <span>Rs. {{$product->MRP}}</span>

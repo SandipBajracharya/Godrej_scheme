@@ -18,9 +18,9 @@ class CreateProductsTable extends Migration
             $table->string('type');
             $table->string('model_no');
             $table->string('size');
-            $table->float('MRP');
-            $table->float('offer_price');
-            $table->float('saved_customer');
+            $table->float('MRP')->nullable();
+            $table->float('offer_price')->nullable();
+            $table->float('saved_customer')->nullable();
             $table->string('category');
             $table->string('image');
             $table->timestamps();

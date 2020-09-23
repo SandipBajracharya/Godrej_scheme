@@ -111,6 +111,7 @@
                             <option value="washing machine">Washine Machine</option>
                             <option value="chest freezer">Chest Freezer</option>
                             <option value="microwave oven">Microwave Oven</option>
+                            <option value="viroshield">Viroshield</option>
                         </select>
                     </div>
                 </div>

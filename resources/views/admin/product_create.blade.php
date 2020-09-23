@@ -62,7 +62,7 @@
                     <label for="mrp" class="col-md-4 col-form-label text-md-right">{{ __('MRP') }}</label>
 
                     <div class="col-md-6">
-                        <input id="mrp" type="number" class="form-control @error('mrp') is-invalid @enderror" name="mrp" value="{{ old('mrp') }}" required autocomplete="mrp" autofocus>
+                        <input id="mrp" type="number" class="form-control @error('mrp') is-invalid @enderror" name="mrp" value="{{ old('mrp') }}" autocomplete="mrp" autofocus>
 
                         @error('mrp')
                             <span class="invalid-feedback" role="alert">
@@ -76,7 +76,7 @@
                     <label for="offer_price" class="col-md-4 col-form-label text-md-right">{{ __('Offer Price') }}</label>
 
                     <div class="col-md-6">
-                        <input id="offer_price" type="number" class="form-control @error('offer_price') is-invalid @enderror" name="offer_price" value="{{ old('offer_price') }}" required autocomplete="offer_price" autofocus>
+                        <input id="offer_price" type="number" class="form-control @error('offer_price') is-invalid @enderror" name="offer_price" value="{{ old('offer_price') }}" autocomplete="offer_price" autofocus>
 
                         @error('offer_price')
                             <span class="invalid-feedback" role="alert">
@@ -90,7 +90,7 @@
                     <label for="save_customer" class="col-md-4 col-form-label text-md-right">{{ __('Saved by Customer') }}</label>
 
                     <div class="col-md-6">
-                        <input id="save_customer" type="text" class="form-control @error('save_customer') is-invalid @enderror" name="save_customer" value="{{ old('save_customer') }}" required autocomplete="save_customer" autofocus>
+                        <input id="save_customer" type="text" class="form-control @error('save_customer') is-invalid @enderror" name="save_customer" value="{{ old('save_customer') }}" autocomplete="save_customer" autofocus>
 
                         @error('save_customer')
                             <span class="invalid-feedback" role="alert">
@@ -110,6 +110,7 @@
                             <option value="washing machine">Washine Machine</option>
                             <option value="chest freezer">Chest Freezer</option>
                             <option value="microwave oven">Microwave Oven</option>
+                            <option value="viroshield">Viroshield</option>
                         </select>
                     </div>
                 </div>
